@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Youtube maison</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Imitation de youtube" />
+        <meta name="keywords" content="flexbox, positionnement" />
+        <meta name="author" content="JL Husson" />
+        <link type="text/css" rel="stylesheet" href="css/youtube.css" />
+    </head>
+
+    <body>
+    	
+        <main>
+        
+        	<section>
+	            <h1 class="titre" id="popMT">Top Pop Music Tracks</h1>
+	            
+        		<article>
+        			<figure>
+	        			<div class="timer">4.02mn</div>
+        				<a href="#" title="desc"><img src="images/swift.jpg" alt="image 1"/></a>
+        			</figure>
+                    <h2 class="artiste">Taylor Swift</h2>
+                    <h2 class="titre">Shake it Off</h2>
+        			<p>de Taylor Swift<span class="vues">211 682 891</span> 
+        			<span class="date">il y a 2 mois</span></p>
+        		</article>
+
+
+        		<article>
+        			<figure>
+	        			<div class="timer">4.47mn</div>
+        				<a href="#" title="desc"><img src="images/iglesias.jpg" alt="image 2" /></a>
+        			</figure>
+        			<h2 class="artiste">Enrique Iglesias</h2>
+                    <h2 class="titre">Bailando</h2>
+        			<p>de Enrique Iglesias<span class="vues">487 910 654 </span> <span class="date">il y a 6 mois</span></p>
+        		</article>
+
+
+        		<article>
+        			<figure>
+	        			<div class="timer">3.52mn</div>
+        				<a href="#" title="desc"><img src="images/sia.jpg" alt="image 3" /></a>
+        			</figure>
+        			<h2 class="artiste">Sia</h2>
+                    <h2 class="titre">Chandelier</h2>
+        			<p>de Sia<span class="vues">178 574 814</span> <span class="date">il y a 5 mois</span></p>
+                </article>
+
+
+        		<article>
+        			<figure>
+                        <div class="timer">5.08mn</div>
+        				<a href="#" title="desc"><img src="images/legend.jpg" alt="image 4" /></a>
+        			</figure>
+        			<h2 class="artiste">John Legend</h2>
+                    <h2 class="titre">All of Me</h2>
+        			<p>de John Legend<span class="vues">271 153 286</span> <span class="date">il y a 1 an</span></p>
+                </article>
+
+            </section>
+        	         
+            
+            
+        
+        	<section>
+         		<h1 class="titre" id="hhMT">Top Hip Hop Music Tracks</h1>
+         		
+        		<article>
+        			<figure>
+                        <div class="timer">3.46mn</div>
+        				<a href="#" title="desc"><img src="images/perry.jpg" alt="image 5"/></a>
+        			</figure>
+        			<h2 class="artiste">Katy Perry</h2>
+                    <h2 class="titre">Dark Horse</h2>
+        			<p>de Katy Perry<span class="vues">649 815 306</span> <span class="date">il y a 8 mois</span></p>
+                </article>
+
+
+        		<article>
+        			<figure>
+                        <div class="timer">5.31mn</div>
+        				<a href="#" title="desc"><img src="images/azalea.jpg" alt="image 6" /></a>
+        			</figure>
+        			<h2 class="artiste">Iggy Azalea</h2>
+                    <h2 class="titre">Black Widow</h2>
+        			<p>de Iggy Azalea<span class="vues">106 329 888</span> <span class="date">il y a 2 mois</span></p>
+                </article>
+
+
+        		<article>
+        			<figure>
+                        <div class="timer">4.31mn</div>
+        				<a href="#" title="desc"><img src="images/brown.jpg" alt="image 7" /></a>
+        			</figure>
+        			<h2 class="artiste">Chris Brown</h2>
+                    <h2 class="titre">Loyal</h2>
+        			<p>de Chris Brown<span class="vues">211 682 891</span> <span class="date">il y a 7 mois</span></p>
+                </article>
+
+
+        		<article>
+        			<figure>
+                        <div class="timer">4.24mn</div>
+        				<a href="#" title="desc"><img src="images/gang.jpg" alt="image 8" /></a>
+        			</figure>
+        			<h2 class="artiste"> Rich Gang</h2>
+                    <h2 class="titre">Lifestyle</h2>
+        			<p>de Rich Gang<span class="vues">56 336 580</span> <span class="date">il y a 4 mois</span></p>
+                </article>
+
+        	</section>
+        </main>
+                     
+    </body>
+</html>
