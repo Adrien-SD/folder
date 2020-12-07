@@ -1,0 +1,313 @@
+
+body {
+    margin : 0 ;
+    padding : 0 ;
+    font-family: Lato ;
+}
+
+div,main,section,article,nav,header,footer {
+    box-sizing: border-box ;
+    overflow: auto;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+
+figure {
+    margin : 0px;
+}
+
+
+a {
+    text-decoration: none ;
+}
+
+
+.wrapper {
+    width : 1100px;
+    margin: auto ;
+}
+
+/* ---------------------------- */
+/* HEADER                       */
+/* ---------------------------- */
+
+
+header {
+    background-color: #343a40 ;
+    font-weight: 700;
+}
+
+header ul {
+    margin-top: 10px ;
+    margin-bottom: 10px ;
+}
+
+#contenu {
+    padding-top : 20px;
+}
+
+
+nav#principale a {
+    color : #95989b ;
+}
+
+#factory {
+    float : left ;
+}
+
+#factory li {
+    display: inline-block ;
+}
+
+#actions {
+    float : right ;
+}
+
+
+#actions li {
+    display: inline-block ;
+    padding-left : 15px;
+    padding-right : 15px;
+    line-height: 60px ; /* la hauteur du logo */
+}
+
+#actions a {
+    transition: color 0.3s ease-out ;
+    color : #f3eeec ;
+}
+
+#actions a:hover {
+    color : #e4e5e6 ;
+}
+
+
+.wrapper nav {
+    float : left ;
+    width : 230px;
+    padding-right : 30px;
+
+}
+
+.wrapper nav ul {
+    margin-top : 20px;
+    margin-bottom : 0px;
+    border: 0 solid silver;
+    border-width: 0 0 1px 1px;
+}
+
+.wrapper nav li {
+    border: 0 solid silver;
+    border-width: 1px 1px 0 0;
+    padding : 10px;
+}
+
+.wrapper nav li:hover {
+    background-color: #eee ;
+}
+
+.wrapper nav p {
+    font-size: 2em ;
+    font-weight: 700;
+    margin-top : 0px;
+    margin-bottom : 0px;
+}
+ 
+.wrapper nav a {
+    color: #1d81fb ;
+}
+ 
+.wrapper main {
+    margin-left: 230px;
+}
+
+
+
+
+/* ---------------------------- */
+/* COUROUSEL                    */
+/* ---------------------------- */
+
+
+
+section.carousel {
+    position : relative ;
+    background-color: #ccc ;
+    height : 250px;
+}
+
+section.carousel a {
+    color : #fff ;
+}
+
+section.carousel a:hover {
+    color : #333 ;
+}
+
+
+
+section.carousel div.fleche {
+    width : 30px ;
+    height : 30px ;
+    font-weight : bold ;
+    line-height : 30px;
+    font-size: 1.5em;
+    color : #fafafa ;
+    text-align: center;
+}
+
+section.carousel div.flecheGauche {
+    position : absolute ;
+    top : 50% ;
+    margin-top : -15px;
+    left : 30px ;
+}
+
+
+section.carousel div.flecheDroite {
+    position : absolute ;
+    top : 50% ;
+    margin-top : -15px;
+    right : 30px ;
+}
+
+
+section.carousel div.marqueurs {
+    position : absolute ;
+    width : 100%;
+    height : 2px;
+    bottom : 30px ;
+    text-align: center;
+}
+
+section.carousel div.marqueurs span.trait{
+    display: inline-block ;
+    width : 25px ;
+    height : 2px;
+    background-color: #fafafa ;
+    margin-left : 4px;
+    margin-right : 4px;
+}
+
+
+
+
+/* ---------------------------- */
+/* PRODUITS                     */
+/* ---------------------------- */
+
+
+
+main section.produits {
+    margin-top: 20px;
+}
+
+main section.produits article.prod {
+    border-radius: 5px;
+    border : 1px solid silver;
+    width : 276px ; /* 870-(2xmargin20) */
+    float : left ;
+    margin-bottom : 20px;
+    margin-right: 20px;
+}
+
+
+main section.produits div.desc {
+    padding : 10px;
+}
+
+
+main section.produits article.prod:nth-child(3n) {
+    margin-right: 0px;
+}
+
+
+main div.image{
+    text-align: center ;
+    color : #fff ;
+    background-color: #ccc ;
+    font-size: 1.2em ;
+}
+
+
+main article.prod h2{
+    margin-top: 0px;
+    font-size : 1.3em ;
+}
+
+main article.prod p.prix{
+    font-weight: bold ;
+    color : #000 ;
+}
+
+main article.prod a {
+    color : #3e95ff ;
+    transition: all 0.5s linear ;
+}
+
+
+main article.prod a:hover {
+    color : #155fb9 ;
+}
+
+
+main section.produits article.prod p.description {
+    min-height: 100px;
+    text-align: justify ;
+}
+
+
+/* ---------------------------- */
+/* NOTATION                     */
+/* ---------------------------- */
+
+
+main div.notation {
+    background-color: #ccc ;
+    line-height : 35px;
+    color : #777;
+    padding-left : 10px;
+}
+
+main div.notation span.starOn:before {
+    content : '★' ;
+    width : 16px;
+    height : 16px;
+}
+
+main div.notation span.starOff:before {
+    content : '☆' ;
+    width : 16px;
+    height : 16px;
+}
+
+/* ---------------------------- */
+/* FOOTER                       */
+/* ---------------------------- */
+
+footer {
+    background-color: #343a40 ;
+    color : #ccc ;
+    height : 70px;
+}
+
+footer p.copyr {
+    text-align : center;
+    color : #e4e5e6 ;
+    line-height: 70px;
+    margin : 0px;
+}
+
+footer a {
+    color : #ccc ;
+}
+
+footer a:hover {
+    color : #fff ;
+}
+
+
+
+
