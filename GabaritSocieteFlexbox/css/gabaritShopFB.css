@@ -1,0 +1,343 @@
+
+body {
+    margin : 0 ;
+    padding : 0 ;
+    font-family: Lato, sans-serif ;
+}
+
+div,main,section,article,nav,header,footer {
+    box-sizing: border-box ;
+}
+
+ul {
+    padding-left: 0px;
+    list-style-type: none ;
+}
+
+
+figure {
+    margin : 0px;
+}
+
+
+a {
+    text-decoration: none ;
+}
+
+
+.wrapper {
+    width : 1100px;
+    margin: auto ;  
+}
+
+
+
+/* ---------------------------- */
+/* HEADER                       */
+/* ---------------------------- */
+
+
+header {
+    background-color: #343a40 ;
+    font-weight: 700;
+}
+
+header ul {
+    margin-top: 10px ;
+    margin-bottom: 10px ;
+}
+
+
+
+nav#principale {
+    display: flex ;
+    justify-content: space-between ; /* comme il n'y a que 2 flex items (les 2 UL factory et actions), le premier sera tout au début de l'axe principal (à gauche ici) et le second tout à droite du coup. L'espace disponible dans le wrapper sera entre les 2 UL donc */
+    /* Nous somme sen flex-direction : row par défaut) */
+}
+
+
+nav#principale a {
+    color : #95989b ;
+}
+
+
+
+#actions {
+    display: flex ;
+    justify-content: space-between  ;
+    width: 350px;
+}
+
+#actions li {
+    line-height: 60px ; /* la hauteur du logo */
+}
+
+#actions a {
+    transition: color 0.3s ease-out ;
+    color : #f3eeec ;
+}
+
+#actions a:hover {
+    color : #e4e5e6 ;
+}
+
+
+
+/* ---------------------------- */
+/* CONTENU                       */
+/* ---------------------------- */
+
+
+#contenu {
+    padding-top : 20px;
+    display: flex ;
+    /* on est en flex-direction : row par défaut donc les 2 enfants "flex items" (la nav pour les catégories et le main) s'afficheront un à coté de l'autre, comme toujours depuis le début vers la fin de l'axe principal, dans ce cas de "gauche à droite" */
+}
+
+
+/* ---------------------------- */
+/* NAV DES CATEGORIES           */
+/* ---------------------------- */
+
+#contenu nav {
+    flex-basis : 200px; /* la largeur initiale de cet item */ 
+    flex-shrink: 0 ; /* interdiction de se rétrécir pour ce bloc, déjà il ne pouvait grossir (car flex-grow est à 0 par défaut) */
+    margin-right : 30px; /* la gouttière entre la nav et le main */
+    
+    display: flex ;
+    flex-wrap: wrap ;
+    flex-direction: column ;
+}
+
+#contenu nav ul {
+    margin-top : 20px;
+    margin-bottom : 0px;
+    border: 0 solid silver;
+    border-width: 0 0 1px 1px;
+    
+    /* sur les prop flex qui suivent, on aurait pu ne rien faire et rester avec le flux naturel qui correspond en fait à ce qu'on veut mais on expérimente ainsi flex en direction column et on prépare un éventuel changement plus tard de mise en page avec le responsive */
+    display: flex ;
+    flex-wrap: wrap ;
+    flex-direction: column ; /* les items ici s'afficheront du haut vers le bas */    
+}
+
+#contenu nav li {
+    border: 0 solid silver;
+    border-width: 1px 1px 0 0;
+    padding : 10px;
+    text-align: center;
+}
+
+#contenu nav li:hover {
+    background-color: #eee ;
+}
+
+#contenu nav p {
+    font-size: 2em ;
+    font-weight: 700;
+    margin-top : 0px;
+    margin-bottom : 0px;    
+}
+ 
+#contenu nav a {
+    color: #1d81fb ;
+}
+ 
+
+
+/* ---------------------------- */
+/* LE MAIN                      */
+/* ---------------------------- */
+
+
+#contenu main {
+    flex-grow: 1 ; /* ce bloc prendra tout l'espace restant disponible sur l'axe principal (ici horizontal) */ 
+}
+
+
+section.carousel {
+    position : relative ; /* préparation du positionnement absolu des flêches et des _ pour la navigation dans les images du carousel */
+    background-color: #ccc ;
+    height : 250px;
+}
+
+section.carousel a {
+    color : #fff ;
+}
+
+section.carousel a:hover {
+    color : #333 ;
+}
+
+
+section.carousel div.fleche {
+    width : 30px ;
+    height : 30px ;
+    font-weight : bold ;
+    line-height : 30px;
+    font-size: 1.5em;
+    color : #fafafa ;
+    text-align: center;
+}
+
+section.carousel div.flecheGauche {
+    position : absolute ;
+    top : 50% ;
+    margin-top : -15px;
+    left : 30px ;
+}
+
+
+section.carousel div.flecheDroite {
+    position : absolute ;
+    top : 50% ;
+    margin-top : -15px;
+    right : 30px ;
+}
+
+
+section.carousel div.marqueurs {
+    position : absolute ;
+    width : 100%;
+    height : 2px;
+    bottom : 30px ;
+    text-align: center;
+}
+
+section.carousel div.marqueurs span.trait{
+    display: inline-block ;
+    width : 25px ;
+    height : 2px;
+    background-color: #fafafa ;
+    margin-left : 4px;
+    margin-right : 4px;
+}
+
+
+
+
+/* ---------------------------- */
+/* PRODUITS                     */
+/* ---------------------------- */
+
+main section.produits {
+    margin-top: 20px;
+    
+    /* dans ce bloc, les items (article ici) wrapperont automatiquement ; ceux qui "tiennent en largeur" occuperont tout l'espace et la place disponible se répartita entre eux */
+    display: flex ;
+    flex-wrap: wrap ;
+    justify-content: space-between ;
+}
+
+main section.produits article.prod {
+    border-radius: 5px;
+    border : 1px solid silver;
+    flex-basis : 280px ; 
+    margin-bottom : 20px;
+    
+    /* Ici on va indiquer comme les 3 sous parties (phot, description et notation) vont s'afficher, en colonne donc */
+    
+    display : flex ;
+    flex-direction: column ;
+    height: 370px;  /* la hauteur est donc fixée ce qui permet d'homogénéiser l'aspect de tous les articles indépendant de la taille du texte de description et vous le verrez ensuite permettra de positionner le bloc "notation" automatiquement tout en bas du bloc article */
+}
+
+
+main section.produits div.desc {
+    padding : 10px;
+    flex-shrink: 0 ;
+    flex-grow : 1 ; /* le bloc description grossira pour occuper tout l'espace disponible (entre la hauteur de l'article et la place occupée par la photo et le bloc notation) */
+    /* Grace à cela, on fait en sorte que le bloc notation soit tout en bas, qq soit la taille du texte de description */
+}
+
+
+
+main div.image{
+    text-align: center ;
+    color : #fff ;
+    background-color: #ccc ;
+}
+
+
+main article.prod h2 {
+    margin-top: 0px;
+    font-size : 1.3em ;
+}
+
+main article.prod p.prix{
+    font-weight: bold ;
+    color : #000 ;
+}
+
+main article.prod a {
+    color : #3e95ff ;
+    transition: all 0.5s linear ;
+}
+
+
+main article.prod a:hover {
+    color : #155fb9 ;
+}
+
+
+main section.produits article.prod p.description {
+    text-align: justify ;
+}
+
+
+/* ---------------------------- */
+/* NOTATION                     */
+/* ---------------------------- */
+
+
+main div.notation {
+    background-color: #ccc ;
+    line-height : 35px;
+    color : #777;
+    padding-left : 10px;
+}
+
+main div.notation span.starOn:before {
+    content : '★' ;
+    width : 16px;
+    height : 16px;
+}
+
+main div.notation span.starOff:before {
+    content : '☆' ;
+    width : 16px;
+    height : 16px;
+}
+
+/* ---------------------------- */
+/* FOOTER                       */
+/* ---------------------------- */
+
+footer {
+    background-color: #343a40 ;
+    color : #ccc ;
+    height : 70px;
+    
+    /* permettra le centrage automatique du paragraphe enfant horizontalement et verticalement dans le footer */
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+}
+
+footer p.copyr {
+    color : #e4e5e6 ;
+    margin : 0px;
+    text-align: center ;
+}
+
+footer a {
+    color : #ccc ;
+}
+
+footer a:hover {
+    color : #fff ;
+}
+
+
+
+
