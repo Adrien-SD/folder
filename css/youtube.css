@@ -1,0 +1,144 @@
+body {
+    font-family: arial, sans-serif ;
+    background-color : #F3F3F3;
+    font-size : 0.8em;
+    padding-top: 20px;
+}
+
+div,main,section,article {
+    box-sizing: border-box;
+}
+
+main {
+    width : 840px;
+    background-color : #fff ;
+    margin : auto ;
+    
+    /* flex activé pour afficher les items enfants (les sections ici) en colonne du haut en bas (comme le flux naturel en fait... donc on pourrait pour l'instant s'en passer) */
+    
+    display: flex ;
+    flex-direction: column ;
+    
+}
+
+section {
+    border-bottom : 1px solid #CCCCCC ;
+    padding : 20px ;
+    padding-top : 5px ;
+    
+    
+    
+    display: flex ;
+    justify-content: space-between ; /* les articles s'afficheront en se répartissant dans l'espace du parent flex (section donc), s'espaçant automatiquement et équitablement */
+    flex-wrap: wrap ;
+}
+
+
+
+section h1 {
+    flex-basis:100%; /* permettra à cet item de la section de prendre tout l'espace du parent (la section donc). Les éléments qui suivent (les articles donc) seront wrappés (voir flex-wrap de section) */
+    
+    color: black;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    margin-top : 10px;
+}
+
+
+article {
+    flex-basis : 190px; /* taille initiale */
+}
+
+figure {
+    position : relative; /* permettra le positionnement absolu du timer et du logo VEVO */
+    margin : 0px;
+}
+
+figure img {
+    vertical-align: bottom; /* sinon on est en mode baseline par défaut et une petite ligne blanche apparaitra en bas de la figure et le bloc vévo ne sera pas positionné en bas de la figure correctement. Faites l'essai en supprimant cette propriété */
+}
+
+figure:before {
+    /* permet l'ajout du bloc VEVO sans avoir à créer un div vide dans le code html */
+    content:''; /* ogligatoire */
+    position : absolute ;
+    bottom : 0px;
+    left : 0px;
+    width : 80px;
+    height : 30px;
+    background-image: url('../images/vevo.png');    
+}
+
+
+article div.timer {
+    position:absolute;
+    bottom:4px;
+    right:2px;
+    color:white;
+    font-weight:bold;
+    background-color:black;
+    line-height: 18px;
+    font-size : 1em ;
+    padding-left:4px;
+    padding-right:4px;
+}
+
+
+
+article h2 {
+    margin : 0px;
+    padding-top : 6px;
+    margin-bottom : 6px;
+    font-size : 1.1em;
+    letter-spacing : 0.1px ;
+    color: #167AC6 ;
+}
+
+h2.artiste , h2.titre {
+    /* on veut que le nom de l'artiste et du titre soient sur la "même ligne" (pas d'effet BLOCK) */
+    display: inline-block ;
+    /* cette partie aurait pu être traitée avec flexbox plutôt que via inline-block mais il aurait fallu créer un parent aux 2 h2 en question pour activer flex dessus et donc obtenir l'affichage de ces 2 élements h2 un à coté de l'autre comme souhaité ici */
+}
+
+h2.artiste:after {
+    /* permet de séparer avec le '-' le nom d'artiste du nom du titre */
+    content : ' - ' ;
+}
+
+article p {
+    margin : 0px;
+    font-size: 0.9em;
+    line-height: 15px;
+}
+
+
+span.date {
+    color : #AAAAAA;    
+}
+
+span.vues {
+    white-space: nowrap ;
+}
+
+span.vues:before {
+    /* provoquer automatiqueemnt le retour à la ligne avant le nombre de vues et ainsi éviter le <br /> systématique dans le code html*/
+    content: "\A" ;
+    white-space:pre ;
+}
+
+span.vues:after {
+    /* ajout automatique du mot 'vues' après le nombre de vues */
+    content: ' vues' ; /* oui, on peut considérer que c'est un peu exagéré :) */
+}
+
+
+h1#popMT:before {
+    content: url('../images/swiftMini.jpg') ;
+    margin-right : 5px;
+}
+
+
+h1#hhMT:before {
+    content: url('../images/perryMini.jpg') ;
+    margin-right : 5px;
+}
