@@ -1,0 +1,270 @@
+
+body {
+    margin : 0px ;
+    margin-bottom : 10px;
+    margin-top : 20px;
+    padding : 0px ;
+    font-family: Lato ;
+}
+
+div,main,section,article,nav,header,footer {
+    box-sizing: border-box ;
+    overflow: auto;
+}
+
+ul {
+    padding-left: 0px;
+    margin-top : 0px;
+    margin-bottom : 0px;
+}
+
+a {
+    text-decoration : none ;
+    color : #555 ;
+}
+
+#wrapper {
+    width : 1100px;
+    margin : auto ;
+}
+
+
+
+section#promo {
+    background: url('../medias/imprim.jpg');
+    height : 364px;
+    color: #555 ;
+    text-align : right ;
+    padding-top : 50px;
+    padding-right : 50px;
+    padding-left : 550px;
+}
+
+
+
+section#promo h1 {
+    margin : 0px;
+    font-size : 2.2em;
+    font-weight: 400;
+}
+
+section#promo p.accroche {
+    font-size : 1.7em;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+
+section#promo p.infos {
+    font-size : 1.3em;
+    font-weight: 300;
+}
+
+section#promo p.bouton {
+    margin-top : 65px;
+}
+
+section#promo a.bouton {
+    padding : 10px 30px 13px 30px;
+    color : #fff;
+    font-size : 22px;
+    background-color : #4F97CE ;
+    border-radius: 10px;
+}
+
+section#promo a.bouton:hover {
+    background-color : rgba(79, 151, 206, 0.6) ;
+    color : #333;
+}
+
+
+
+
+nav#principale li {
+    display : inline-block;   
+    vertical-align: middle ;
+}
+
+nav#principale form {   
+    float : right ;
+    margin-top: 12px;
+}
+
+nav#principale form a {
+    color : cadetblue ;
+    font-weight: 400 ;
+}
+
+
+nav#principale input[type="text"] {
+    height : 20px;
+}
+
+nav#principale input[type="submit"] {
+    
+}
+
+nav#principale a {
+    color : #777 ;
+    padding-right : 15px;
+    padding-left : 15px;
+    font-size : 1em;
+    letter-spacing: 1px;
+    line-height: 40px ;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    font-weight : 700;
+}
+
+
+nav#principale li:not([class="logospecial"]) a:hover {
+    background-color : #eee ;
+    border-top : 3px solid #4F97CE ; 
+}
+
+
+nav#principale a.rechercher {
+    color : cadetblue;
+    padding-top : 5px;
+    padding-bottom : 5px;
+    border-radius: 6px;
+}
+
+nav#principale ul li a.rechercher:hover {
+    color : cadetblue;
+    padding-top : 5px;
+    padding-bottom : 5px;
+    border-radius: 6px;
+    border : none ; 
+    background : none ;
+}
+
+
+
+section#carac {
+    padding : 25px;
+    font-weight: 300;
+    background-color: #f9f9f9 ;
+}
+
+
+#carac article p.titre {
+    font-weight: 400;
+    font-size : 1.5em;
+}
+
+
+section#stores {
+   padding : 20px;
+   padding-left : 100px;
+   padding-right : 100px;
+   background-color: #fff ;
+}
+
+
+section#stores p {
+   color : #666;
+   margin-top : 0px;
+   font-size : 1.1em;
+    text-align: center;
+}
+
+
+
+
+section#stores li {
+    text-align: center ;
+    display: inline-block ;
+    width : 33%;
+    color : cadetblue;
+}
+
+
+section#stores a.AppAnd:before {
+    content: url('../medias/pictos/android.png') ;
+} 
+
+section#stores a.AppApple:before {
+    content: url('../medias/pictos/apple.png') ;
+} 
+
+section#stores a.AppWin:before {
+    content: url('../medias/pictos/windows.png') ;
+} 
+
+section#stores span {
+    position : relative ;
+    top : -10px;
+} 
+
+
+footer {
+    color : #fff ;
+    text-align: center;
+    font-size : 1em;
+    background-color : #4F97CE ;
+    padding : 20px;
+
+}
+
+
+footer p.copyr {
+    color : #fff ;
+    margin-bottom : 0px;
+}
+
+footer img {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+footer a {
+    color : #fff ;
+}
+
+
+#carac article, #carac nav {
+    float : left ;
+    width : 50%;
+    text-align: justify ;
+    padding : 10px;
+
+}
+
+#carac article p {
+    font-weight: 300;
+    font-size : 1.0em;
+    line-height: 1.5em;
+}
+
+
+
+#items li {
+    list-style-type: none  ;
+    background-color: #fff ;
+    padding-left : 80px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+
+    line-height: 64px;
+
+    background-repeat: no-repeat ;
+    background-position: 8px 8px;
+}
+
+
+#items li.bloc1 {
+    background-image:  url(../medias/pictos/productIcon_01.png);
+}
+
+#items li.bloc2 {
+    background-image:  url(../medias/pictos/productIcon_02.png);
+}
+
+#items li.bloc3 {
+    background-image:  url(../medias/pictos/productIcon_MeshMixer.png);
+}
+
+#items li.bloc4 {
+    background-image:  url(../medias/pictos/productIcon_Sculpt.png);
+}
