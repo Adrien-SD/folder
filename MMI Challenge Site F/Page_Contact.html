@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+        <title>Contact - RewSound</title>
+        <meta charset="UTF-8" />
+        <meta name="author" content="ASD" />
+        <meta name="keywords" content="Contact,RewSound" />
+        <meta name="description" content="page contact" />
+        <link type="text/css" rel="stylesheet" href="CSS/Page_Contact.css" />
+        <link rel="icon" type="image/png" href="media/logoRS10x10SS.png" />
+   </head>
+   
+   <body>
+       <div id="corps">
+           <!-- Bannière -->
+             <figure>
+                <a href="index.html"><img src="media/banniere.png" alt="Image bannière" /></a>
+            </figure>
+
+            <!-- Menu -->
+
+            <div id="menu">
+                <ul id="menu-demo2">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="Page_Hologravo.html">Hologravo</a></li>
+                    <li><a href="">RewSound</a>
+                        <ul>
+                            <li><a href="Page_Equipe.html">Équipe</a></li>
+                            <li><a href="Page_A_Propos.html">À propos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="fond_gris">Contact</a>
+                        <ul>
+                            <li><a href="Page_Reseaux.html">Réseaux sociaux</a></li>
+                            <li><a href="Page_Contact.html">Nous contacter</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Page_Media.html">Médias</a></li>
+                    <li><a href="Page_Collaboration.html">Collaboration</a></li>
+                </ul>
+            </div>
+
+           <h1>Contact</h1>
+           
+           <p>Tu as une suggestion pour nous aider à libérer le monde de la musique ? Repéré un bug dans la matrice ?</p>
+           
+           <p>Alors remplis le formulaire ci-dessous et dis-nous en plus.</p>
+           
+           <form action="php/envoieMail.php" method="get">
+                <fieldset>
+                   <legend>Nous contacter</legend>
+                    <input type="hidden" name="dest" value="mailto:adrien.saint-dizier7@etu.univ-lorraine.fr" />
+                    <table>
+                        <tr>
+                            <td><label for="mail">Votre adresse mail : </label></td>
+                            <td><input type="email" name="exped" id="mail"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="suj">Sujet :</label></td>
+                            <td><input type="text" name="sujet" id="suj" /></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="cho">Motif de votre message : </label></td>
+                            <td><select id="cho">
+                                <option>Suggérer une idée</option>
+                                <option>Signaler un bug dans la matrice</option>
+                                <option>Autre</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><textarea name="message"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" name="Envoyer" class="bouton" /></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>  
+           
+           <!-- PIed de page -->
+            <footer>
+                <p>Copyright &#9400; 2222 RewSound</p>
+                <p><a href="Page_A_Propos.html">À propos</a> | <a href="Page_Contact.html">Contact</a></p>
+                <p><a href="https://twitter.com/Rewsoundoff"><span id="Twit"></span></a>    <a href="https://www.facebook.com/RewSound-Officiel-101596694719227/?modal=admin_todo_tour"><span id="Face"></span></a>    <a href="https://www.instagram.com/rewsoundofficial/?hl=fr"><span id="Insta"></span></a></p>
+            </footer>
+       </div>
+       
+    </body>
+</html>
